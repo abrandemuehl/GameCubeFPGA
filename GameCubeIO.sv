@@ -4,8 +4,7 @@ module GameCubeIO(input logic usClock,
 						input logic Rumble,
 						inout GPIO,
 						inout extra,
-						output logic [17:0] LEDR,
-						output logic [8:0] LEDG,
+//						output logic [17:0] LEDR,
 						output logic START,
 						output logic Y,
 						output logic X,
@@ -56,15 +55,16 @@ module GameCubeIO(input logic usClock,
 	assign cstickY = poll_response[40:47];
 	assign lButton = poll_response[48:55];
 	assign rButton = poll_response[56:63];
-	assign LEDR[7:0] = rButton;
-	assign LEDR[17] = START;
-	assign LEDR[16] = Y;
-	assign LEDR[15] = X;
-	assign LEDR[14] = B;
-	assign LEDR[13] = A;
-	assign LEDR[12] = L;
-	assign LEDR[11] = R;
-	assign LEDR[10] = Z;
+//	assign LEDR[7:0] = joyX;
+//	assign LEDR[17:15] = joyX[7:5] - 3'b011;
+//	assign LEDR[17] = START;
+//	assign LEDR[16] = Y;
+//	assign LEDR[15] = X;
+//	assign LEDR[14] = B;
+//	assign LEDR[13] = A;
+//	assign LEDR[12] = L;
+//	assign LEDR[11] = R;
+//	assign LEDR[10] = Z;
 	
 	initial begin
 		counter <= '0;

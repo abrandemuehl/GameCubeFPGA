@@ -13,7 +13,14 @@ logic[3:0] KEY;
 logic [17:0] SW;
 wire [6:0] EXT_IO;
 
-
+logic [7:0] VGA_R;
+logic [7:0] VGA_G;
+logic [7:0] VGA_B;
+logic VGA_CLK;
+logic VGA_SYNC_N;
+logic VGA_BLANK_N;
+logic VGA_VS;
+logic VGA_HS;
 
 Gamecube gc(.*);
 
